@@ -7,7 +7,7 @@ import Loader from '../components/Loader'
 import { getOrderDetails, deliverOrder } from '../actions/orderActions'
 import { ORDER_DELIVER_RESET } from '../constants/orderConstants'
 
-const OrderScreen = ({ match }) => {
+const OrderScreen = ({ match, history }) => {
   const orderId = match.params.id
 
   const dispatch = useDispatch()
