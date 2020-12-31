@@ -8,8 +8,8 @@ import FormContainer from '../components/FormContainer'
 import { login } from '../actions/userActions'
 
 const LoginScreen = ({ location, history }) => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('admin@example.com')
+  const [password, setPassword] = useState('admin')
 
   const dispatch = useDispatch()
 
@@ -38,6 +38,7 @@ const LoginScreen = ({ location, history }) => {
         <Form.Group controlId='email'>
           <Form.Label>Email Address</Form.Label>
           <Form.Control
+            className='text-primary'
             type='email'
             placeholder='Enter email'
             value={email}
@@ -47,6 +48,7 @@ const LoginScreen = ({ location, history }) => {
         <Form.Group controlId='password'>
           <Form.Label>Password</Form.Label>
           <Form.Control
+            className='text-primary'
             type='password'
             placeholder='Enter password'
             value={password}
@@ -59,9 +61,9 @@ const LoginScreen = ({ location, history }) => {
       </Form>
       <Row className='py-3'>
         <Col>
-          New customer?{' '}
+          Or{' '}
           <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
-            Register
+            <strong>Register</strong> 
           </Link>
         </Col>
       </Row>

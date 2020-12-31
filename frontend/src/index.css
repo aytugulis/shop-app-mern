@@ -47,4 +47,8 @@ h2 {
   .carousel-caption h2 {
     font-size: 2.5vw;
   }
+  /* searchbox */
+.search-input {
+  width: 40%;
+}
 }
